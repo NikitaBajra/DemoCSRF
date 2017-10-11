@@ -46,16 +46,16 @@
         <property name="dataSource" ref="dataSource" />
         <!-- Package where all the Entity(model) exits. -->
         <property name="packagesToScan">
-            <list>
+            <array>
                 <value>com.demo.entity</value>
-            </list>
+            </array>
         </property>
         
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop> <!--create, update, validate -->
+                <prop key="hibernate.hbm2ddl.auto">validate</prop> <!--create, update, validate -->
                 
             </props>
         </property>

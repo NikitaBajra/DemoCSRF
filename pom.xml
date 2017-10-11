@@ -18,14 +18,65 @@
 	</properties>
 	
 	<dependencies>
-		<!-- validation api -->
-		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+		<!-- Spring -->
 		<dependency>
-		    <groupId>javax.validation</groupId>
-		    <artifactId>validation-api</artifactId>
-		    <version>1.1.0.Final</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<!-- START: Extra spring library added: -->
+		<!-- Spring Security version 4 -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+
+		<!-- Apache Commons DBCP -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+
 		<!-- Common File Upload: -->
 		<dependency>
 			<groupId>commons-fileupload</groupId>
@@ -34,18 +85,16 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+	        <groupId>commons-collections</groupId>
+	        <artifactId>commons-collections</artifactId>
+	        <version>3.2.2</version>
+	    </dependency>
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
-		
-		<!-- Apache Commons DBCP -->
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
-		
+
 		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -70,7 +119,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
 		<!-- https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
 		<dependency>
 			<groupId>org.hibernate.common</groupId>
@@ -85,20 +133,19 @@
 			<version>5.1.10</version>
 		</dependency>
 		
-		<!-- Spring -->
+	
+	
+	
+	
+	
+		<!-- validation api -->
+		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${org.springframework-version}</version>
-			<exclusions>
-				<!-- Exclude Commons Logging in favor of SLF4j -->
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				 </exclusion>
-			</exclusions>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.1.0.Final</version>
 		</dependency>
-		
+				
 		<!-- JDBC -->
 		<dependency>
 	        <groupId>org.springframework</groupId>
@@ -107,37 +154,6 @@
 	    </dependency>
 	    
 		<dependency>
-	        <groupId>org.springframework</groupId>
-	        <artifactId>spring-web</artifactId>
-	        <version>${org.springframework-version}</version>
-	    </dependency>
-	    
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.8.10</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		
-		
-	    <dependency>
 	        <groupId>javax.transaction</groupId>
 	        <artifactId>jta</artifactId>
 	        <version>1.1</version>
@@ -163,6 +179,11 @@
 	    </dependency>
 		
 		
+	    
+	    
+	    
+	    
+	    
 	    
 		<!-- START: Extra spring library added: -->
 		<!-- Spring Security version 4 -->

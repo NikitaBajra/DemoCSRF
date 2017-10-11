@@ -23,7 +23,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/time", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
@@ -34,13 +34,24 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "login";
 	}
 	
-	@RequestMapping(value = "/login")
+	/*@RequestMapping(value = "/login")
 	public ModelAndView mvc(){
-		ModelAndView mv = new ModelAndView("CsrfToken");
-		mv.addObject("title", "Login");
+		
+		ModelAndView mv = new ModelAndView("context");
+		
 		return mv;
+	}*/
+	
+	/*@RequestMapping(value = "/")
+	public String login(){
+		return "login";
+	}*/
+	
+	@RequestMapping(value = "/login1",method = RequestMethod.POST)
+	public String nextPage(){
+		return "context";
 	}
 }
